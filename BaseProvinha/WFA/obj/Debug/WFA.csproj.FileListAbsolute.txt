@@ -18,3 +18,4 @@ C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.csp
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.Form1.resources
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.Properties.Resources.resources
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.csproj.GenerateResource.Cache
+C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.ListaAlunos.resources

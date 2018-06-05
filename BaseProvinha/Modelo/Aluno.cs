@@ -66,7 +66,7 @@ namespace Modelo
                 throw new Exception("Seu turno deve conter no mínimo 7 caracteres");
             }
 
-            if (turno.Trim() != "Matutino" || turno.Trim() != "Vespertino" || turno.Trim() != "Noturno")
+            if (turno.Trim().ToLower() != "matutino" && turno.Trim().ToLower() != "vespertino" && turno.Trim().ToLower() != "noturno")
             {
                 throw new Exception("Turno deve conter somente matutino, vespertino ou noturno");
             }
