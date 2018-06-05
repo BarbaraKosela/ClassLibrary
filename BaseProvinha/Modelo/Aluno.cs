@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelo
 {
-    class Aluno
+    public class Aluno
     {
 
         private string Nome;
@@ -94,7 +94,7 @@ namespace Modelo
         {
             if (matricula < 0)
             {
-                throw new Exception("A matricula deve ser maior do que 0")
+                throw new Exception("A matricula deve ser maior do que 0");
             }
         }
     }

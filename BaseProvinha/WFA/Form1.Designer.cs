@@ -35,14 +35,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnApagar = new System.Windows.Forms.Button();
+            this.txtMatricula = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtIdade = new System.Windows.Forms.TextBox();
+            this.txtturno = new System.Windows.Forms.TextBox();
+            this.txtTurma = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -116,71 +116,72 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "SALVAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnAdicionar
             // 
-            this.button2.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(352, 186);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 36);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "ADICIONAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Location = new System.Drawing.Point(352, 186);
+            this.btnAdicionar.Name = "btnAdicionar";
+            this.btnAdicionar.Size = new System.Drawing.Size(140, 36);
+            this.btnAdicionar.TabIndex = 7;
+            this.btnAdicionar.Text = "ADICIONAR";
+            this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnEditar
             // 
-            this.button3.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(188, 186);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 36);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "EDITAR";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnEditar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(188, 186);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(140, 36);
+            this.btnEditar.TabIndex = 8;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnApagar
             // 
-            this.button4.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(27, 186);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 36);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "APAGAR";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnApagar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.Location = new System.Drawing.Point(27, 186);
+            this.btnApagar.Name = "btnApagar";
+            this.btnApagar.Size = new System.Drawing.Size(140, 36);
+            this.btnApagar.TabIndex = 9;
+            this.btnApagar.Text = "APAGAR";
+            this.btnApagar.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // txtMatricula
             // 
-            this.textBox1.Location = new System.Drawing.Point(117, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(276, 20);
-            this.textBox1.TabIndex = 10;
+            this.txtMatricula.Location = new System.Drawing.Point(117, 23);
+            this.txtMatricula.Name = "txtMatricula";
+            this.txtMatricula.Size = new System.Drawing.Size(276, 20);
+            this.txtMatricula.TabIndex = 10;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.Location = new System.Drawing.Point(85, 46);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(308, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtNome.Location = new System.Drawing.Point(85, 46);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(308, 20);
+            this.txtNome.TabIndex = 11;
             // 
-            // textBox3
+            // txtIdade
             // 
-            this.textBox3.Location = new System.Drawing.Point(85, 72);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(308, 20);
-            this.textBox3.TabIndex = 12;
+            this.txtIdade.Location = new System.Drawing.Point(85, 72);
+            this.txtIdade.Name = "txtIdade";
+            this.txtIdade.Size = new System.Drawing.Size(308, 20);
+            this.txtIdade.TabIndex = 12;
             // 
-            // textBox4
+            // txtturno
             // 
-            this.textBox4.Location = new System.Drawing.Point(85, 99);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(308, 20);
-            this.textBox4.TabIndex = 13;
+            this.txtturno.Location = new System.Drawing.Point(85, 99);
+            this.txtturno.Name = "txtturno";
+            this.txtturno.Size = new System.Drawing.Size(308, 20);
+            this.txtturno.TabIndex = 13;
             // 
-            // textBox5
+            // txtTurma
             // 
-            this.textBox5.Location = new System.Drawing.Point(85, 125);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(308, 20);
-            this.textBox5.TabIndex = 14;
+            this.txtTurma.Location = new System.Drawing.Point(85, 125);
+            this.txtTurma.Name = "txtTurma";
+            this.txtTurma.Size = new System.Drawing.Size(308, 20);
+            this.txtTurma.TabIndex = 14;
             // 
             // label7
             // 
@@ -207,14 +208,14 @@
             this.ClientSize = new System.Drawing.Size(516, 497);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.txtTurma);
+            this.Controls.Add(this.txtturno);
+            this.Controls.Add(this.txtIdade);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtMatricula);
+            this.Controls.Add(this.btnApagar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -240,14 +241,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Button btnAdicionar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnApagar;
+        private System.Windows.Forms.TextBox txtMatricula;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtIdade;
+        private System.Windows.Forms.TextBox txtturno;
+        private System.Windows.Forms.TextBox txtTurma;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
     }
