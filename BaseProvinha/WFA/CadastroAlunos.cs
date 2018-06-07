@@ -28,6 +28,7 @@ namespace WFA
         {
             try
             {
+                bool novo = aluno == null;
                 if (aluno == null)
                 {
                     aluno = new Aluno();
@@ -38,7 +39,24 @@ namespace WFA
                 aluno.SetTurma(txtTurma.Text);
                 aluno.SetTurno(txtturno.Text);
                 aluno.SetMatricula(Convert.ToInt32(txtMatricula.Text));
+
+                if (novo)
+                {
                 Program.alunos.Add(aluno);
+
+                }
+
+                else
+                {
+                    for (int i = 0; i < Program.alunos.Count(); i++)
+                    {
+                        Aluno alunoAux = Program.alunos[i];
+                        if (aluno.GetCodigo() == alunoAux.GetCodigo())
+                        {
+                            Program.alunos[i] = aluno;
+                        }
+                    }
+                }
                 btnAdicionar.Enabled = true;
                 btnApagar.Enabled = true;
                 btnEditar.Enabled = true;

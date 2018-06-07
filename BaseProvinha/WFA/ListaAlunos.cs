@@ -30,11 +30,10 @@ namespace WFA
             {
                 Aluno aluno = Program.alunos[i];
                 dataGridView1.Rows.Add(new Object[]{
-
+                    aluno.GetCodigo(),
                     aluno.GetNome(),
                     aluno.GetTurma(),
                     aluno.GetTurno(),
-                    
                     aluno.GetIdade()
 
                 });
