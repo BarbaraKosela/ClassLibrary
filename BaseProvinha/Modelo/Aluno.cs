@@ -116,6 +116,11 @@ namespace Modelo
             }
         }
 
+        public int GetMatricula()
+        {
+            return Matricula;
+        }
+
         public void AdicionarNota(double nota)
         {
             Notas.Add(nota);

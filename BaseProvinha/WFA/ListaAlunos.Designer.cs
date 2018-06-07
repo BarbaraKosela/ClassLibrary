@@ -68,6 +68,7 @@
             this.btnApagarAluno.TabIndex = 17;
             this.btnApagarAluno.Text = "APAGAR";
             this.btnApagarAluno.UseVisualStyleBackColor = false;
+            this.btnApagarAluno.Click += new System.EventHandler(this.btnApagarAluno_Click);
             // 
             // btnEditarAluno
             // 
@@ -80,6 +81,7 @@
             this.btnEditarAluno.TabIndex = 20;
             this.btnEditarAluno.Text = "EDITAR";
             this.btnEditarAluno.UseVisualStyleBackColor = false;
+            this.btnEditarAluno.Click += new System.EventHandler(this.btnEditarAluno_Click);
             // 
             // btnAdicionarAluno
             // 

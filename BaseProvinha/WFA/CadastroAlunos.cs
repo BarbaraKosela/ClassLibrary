@@ -14,9 +14,35 @@ namespace WFA
     public partial class CadastroAlunos : Form
     {
         private Aluno aluno;
+        private int codigo;
         public CadastroAlunos()
         {
             InitializeComponent();
+        }
+
+        public CadastroAlunos(int codigo)
+        {
+            InitializeComponent();
+            
+            this.codigo = codigo;
+            for (int i = 0; i < Program.alunos.Count(); i++)
+            {
+                Aluno aluno = Program.alunos[i];
+                if (aluno.GetCodigo() == codigo)
+                {
+                    txtNome.Text = aluno.GetNome();
+                    txtIdade.Text = Convert.ToString(aluno.GetIdade());
+                    txtTurma.Text = aluno.GetTurma();
+                    txtturno.Text = aluno.GetTurno();
+                    txtMatricula.Text = Convert.ToString(aluno.GetMatricula());
+                    this.aluno = aluno;
+
+                    btnAdicionar.Enabled = true;
+                    btnApagar.Enabled = true;
+                    btnEditar.Enabled = true;
+                    return;
+                }
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -39,5 +39,17 @@ namespace WFA
                 });
             }
         }
+
+        private void btnEditarAluno_Click(object sender, EventArgs e)
+        {
+           int codigo = Convert.ToInt32(dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString());
+
+           new CadastroAlunos(codigo).ShowDialog();
+        }
+
+        private void btnApagarAluno_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
