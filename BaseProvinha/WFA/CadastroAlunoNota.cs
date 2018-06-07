@@ -23,6 +23,11 @@ namespace WFA
 
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
+            CadastrarNota();
+        }
+
+        private void CadastrarNota()
+        {
             try
             {
                 double nota = Convert.ToDouble(txtNota.Text);
@@ -42,6 +47,14 @@ namespace WFA
         {
             this.DialogResult = DialogResult.Cancel;
             Dispose();
+        }
+
+        private void txtNota_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                CadastrarNota();
+            }
         }
     }
 }

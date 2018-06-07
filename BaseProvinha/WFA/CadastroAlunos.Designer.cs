@@ -175,6 +175,7 @@
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(276, 20);
             this.txtMatricula.TabIndex = 10;
+            this.txtMatricula.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatricula_KeyDown);
             // 
             // txtNome
             // 
@@ -183,6 +184,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(308, 20);
             this.txtNome.TabIndex = 11;
+            this.txtNome.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNome_KeyDown);
             // 
             // txtIdade
             // 
@@ -191,6 +193,7 @@
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(308, 20);
             this.txtIdade.TabIndex = 12;
+            this.txtIdade.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIdade_KeyDown);
             // 
             // txtturno
             // 
@@ -199,6 +202,7 @@
             this.txtturno.Name = "txtturno";
             this.txtturno.Size = new System.Drawing.Size(308, 20);
             this.txtturno.TabIndex = 13;
+            this.txtturno.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtturno_KeyDown);
             // 
             // txtTurma
             // 
@@ -207,6 +211,7 @@
             this.txtTurma.Name = "txtTurma";
             this.txtTurma.Size = new System.Drawing.Size(308, 20);
             this.txtTurma.TabIndex = 14;
+            this.txtTurma.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTurma_KeyDown);
             // 
             // label7
             // 
@@ -226,10 +231,10 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1Nota});
-            this.dataGridView1.Location = new System.Drawing.Point(42, 276);
+            this.dataGridView1.Location = new System.Drawing.Point(42, 271);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(434, 192);
+            this.dataGridView1.Size = new System.Drawing.Size(434, 197);
             this.dataGridView1.TabIndex = 16;
             // 
             // Column1Nota
@@ -263,9 +268,11 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.KeyPreview = true;
             this.Name = "CadastroAlunos";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CadastroAlunos_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

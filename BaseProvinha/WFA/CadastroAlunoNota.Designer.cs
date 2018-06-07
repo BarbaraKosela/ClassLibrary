@@ -42,6 +42,7 @@
             this.txtNota.Name = "txtNota";
             this.txtNota.Size = new System.Drawing.Size(308, 49);
             this.txtNota.TabIndex = 14;
+            this.txtNota.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNota_KeyDown);
             // 
             // btnEditar
             // 
