@@ -1,6 +1,6 @@
 ﻿namespace WFA
 {
-    partial class Form1
+    partial class CadastroAlunos
     {
         /// <summary>
         /// Required designer variable.
@@ -127,6 +127,7 @@
             this.btnAdicionar.TabIndex = 7;
             this.btnAdicionar.Text = "ADICIONAR";
             this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnEditar
             // 
@@ -201,7 +202,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(434, 192);
             this.dataGridView1.TabIndex = 16;
             // 
-            // Form1
+            // CadastroAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -223,7 +224,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "CadastroAlunos";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

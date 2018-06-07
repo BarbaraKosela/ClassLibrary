@@ -44,11 +44,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="CadastroAlunoNota.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CadastroAlunoNota.Designer.cs">
+      <DependentUpon>CadastroAlunoNota.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CadastroAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroAlunos.Designer.cs">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaAlunos.cs">
       <SubType>Form</SubType>
@@ -58,8 +64,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroAlunoNota.resx">
+      <DependentUpon>CadastroAlunoNota.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CadastroAlunos.resx">
+      <DependentUpon>CadastroAlunos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListaAlunos.resx">
       <DependentUpon>ListaAlunos.cs</DependentUpon>

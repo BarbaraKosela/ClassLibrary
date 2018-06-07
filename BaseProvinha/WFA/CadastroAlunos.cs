@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WFA
 {
-    public partial class Form1 : Form
+    public partial class CadastroAlunos : Form
     {
-        public Form1()
+        public CadastroAlunos()
         {
             InitializeComponent();
         }
@@ -33,12 +33,20 @@ namespace WFA
                 aluno.SetTurma(txtTurma.Text);
                 aluno.SetTurno(txtturno.Text);
                 aluno.SetMatricula(Convert.ToInt32(txtMatricula.Text));
+                Program.alunos.Add(aluno);
+
+            
             }
 
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             } 
+        }
+
+        private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

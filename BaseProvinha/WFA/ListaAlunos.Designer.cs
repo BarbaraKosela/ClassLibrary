@@ -32,14 +32,26 @@
             this.btnApagarAluno = new System.Windows.Forms.Button();
             this.btnEditarAluno = new System.Windows.Forms.Button();
             this.btnAdicionarAluno = new System.Windows.Forms.Button();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1Turma = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1Idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNome,
+            this.Column1Turma,
+            this.Column1Turno,
+            this.Column1Idade});
             this.dataGridView1.Location = new System.Drawing.Point(22, 65);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(470, 407);
             this.dataGridView1.TabIndex = 18;
             // 
@@ -66,12 +78,41 @@
             // btnAdicionarAluno
             // 
             this.btnAdicionarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarAluno.Location = new System.Drawing.Point(191, 12);
+            this.btnAdicionarAluno.Location = new System.Drawing.Point(188, 12);
             this.btnAdicionarAluno.Name = "btnAdicionarAluno";
             this.btnAdicionarAluno.Size = new System.Drawing.Size(140, 36);
             this.btnAdicionarAluno.TabIndex = 19;
             this.btnAdicionarAluno.Text = "ADICIONAR";
             this.btnAdicionarAluno.UseVisualStyleBackColor = true;
+            this.btnAdicionarAluno.Click += new System.EventHandler(this.btnAdicionarAluno_Click);
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // Column1Turma
+            // 
+            this.Column1Turma.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1Turma.HeaderText = "Turma";
+            this.Column1Turma.Name = "Column1Turma";
+            this.Column1Turma.ReadOnly = true;
+            // 
+            // Column1Turno
+            // 
+            this.Column1Turno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1Turno.HeaderText = "Turno";
+            this.Column1Turno.Name = "Column1Turno";
+            this.Column1Turno.ReadOnly = true;
+            // 
+            // Column1Idade
+            // 
+            this.Column1Idade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1Idade.HeaderText = "Idade";
+            this.Column1Idade.Name = "Column1Idade";
+            this.Column1Idade.ReadOnly = true;
             // 
             // ListaAlunos
             // 
@@ -84,6 +125,7 @@
             this.Controls.Add(this.btnApagarAluno);
             this.Name = "ListaAlunos";
             this.Text = "ListaAlunos";
+            this.Activated += new System.EventHandler(this.ListaAlunos_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -95,5 +137,9 @@
         private System.Windows.Forms.Button btnApagarAluno;
         private System.Windows.Forms.Button btnEditarAluno;
         private System.Windows.Forms.Button btnAdicionarAluno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1Turma;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1Turno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1Idade;
     }
 }

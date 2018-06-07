@@ -87,7 +87,17 @@ namespace Modelo
             {
                 throw new Exception("A turma deve ser maior do que 1");
             }
+
+            if (turma.Trim().Count() > 3)
+            {
+                throw new Exception("Turma deve conter no máximo 3");
+            }
             Turma = turma;
+        }
+
+        public string GetTurma()
+        {
+            return Turma;
         }
 
         public void SetMatricula(int matricula)
@@ -96,6 +106,11 @@ namespace Modelo
             {
                 throw new Exception("A matricula deve ser maior do que 0");
             }
+        }
+
+        public void AdicionarNota(double nota)
+        {
+            Notas.Add(nota);
         }
     }
 }

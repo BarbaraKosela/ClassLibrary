@@ -15,7 +15,8 @@ C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\bin\Debug\WFA.pdb
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\bin\Debug\Modelo.dll
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\bin\Debug\Modelo.pdb
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.csprojResolveAssemblyReference.cache
-C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.Form1.resources
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.Properties.Resources.resources
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.csproj.GenerateResource.Cache
 C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.ListaAlunos.resources
+C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.CadastroAlunos.resources
+C:\Users\104962\Documents\GitHub\ClassLibrary\BaseProvinha\WFA\obj\Debug\WFA.CadastroAlunoNota.resources
