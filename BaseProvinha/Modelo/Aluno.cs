@@ -112,5 +112,10 @@ namespace Modelo
         {
             Notas.Add(nota);
         }
+
+        public List<double> GetNotas()
+        {
+            return Notas;
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace WFA
 {
     public partial class CadastroAlunos : Form
     {
+        private Aluno aluno;
         public CadastroAlunos()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace WFA
         {
             try
             {
-                Aluno aluno = new Aluno();
+                aluno = new Aluno();
                 aluno.SetNome(txtNome.Text);
                 aluno.SetIdade(Convert.ToInt32(txtIdade.Text));
                 aluno.SetTurma(txtTurma.Text);
@@ -45,6 +46,30 @@ namespace WFA
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = new CadastroAlunoNota(aluno).ShowDialog();
+            if (dialogResult == DialogResult.OK)
+            {
+                AtualizarDataGridViewDasNotas();
+            }
+        }
+
+        private void AtualizarDataGridViewDasNotas()
+        {
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < aluno.GetNotas().Count(); i++)
+            {
+                double nota = aluno.GetNotas()[i];
+                dataGridView1.Rows.Add(new Object[] { nota });
+            }
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnApagar_Click(object sender, EventArgs e)
         {
 
         }

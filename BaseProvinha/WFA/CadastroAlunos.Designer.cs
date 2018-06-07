@@ -45,12 +45,14 @@
             this.txtTurma = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1Nota = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.DarkRed;
             this.label1.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(21, 24);
             this.label1.Name = "label1";
@@ -61,6 +63,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.DarkRed;
             this.label2.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(21, 47);
             this.label2.Name = "label2";
@@ -71,6 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.DarkRed;
             this.label3.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(21, 124);
             this.label3.Name = "label3";
@@ -81,6 +85,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.DarkRed;
             this.label4.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 98);
             this.label4.Name = "label4";
@@ -91,6 +96,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.DarkRed;
             this.label5.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(24, 73);
             this.label5.Name = "label5";
@@ -109,48 +115,59 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.DarkRed;
             this.button1.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(405, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 146);
             this.button1.TabIndex = 6;
             this.button1.Text = "SALVAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnAdicionar
             // 
+            this.btnAdicionar.BackColor = System.Drawing.Color.DarkRed;
             this.btnAdicionar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdicionar.Location = new System.Drawing.Point(352, 186);
             this.btnAdicionar.Name = "btnAdicionar";
             this.btnAdicionar.Size = new System.Drawing.Size(140, 36);
             this.btnAdicionar.TabIndex = 7;
             this.btnAdicionar.Text = "ADICIONAR";
-            this.btnAdicionar.UseVisualStyleBackColor = true;
+            this.btnAdicionar.UseVisualStyleBackColor = false;
             this.btnAdicionar.Click += new System.EventHandler(this.btnAdicionar_Click);
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.Color.DarkRed;
             this.btnEditar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditar.Location = new System.Drawing.Point(188, 186);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(140, 36);
             this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "EDITAR";
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnApagar
             // 
+            this.btnApagar.BackColor = System.Drawing.Color.DarkRed;
             this.btnApagar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnApagar.Location = new System.Drawing.Point(27, 186);
             this.btnApagar.Name = "btnApagar";
             this.btnApagar.Size = new System.Drawing.Size(140, 36);
             this.btnApagar.TabIndex = 9;
             this.btnApagar.Text = "APAGAR";
-            this.btnApagar.UseVisualStyleBackColor = true;
+            this.btnApagar.UseVisualStyleBackColor = false;
+            this.btnApagar.Click += new System.EventHandler(this.btnApagar_Click);
             // 
             // txtMatricula
             // 
+            this.txtMatricula.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtMatricula.Location = new System.Drawing.Point(117, 23);
             this.txtMatricula.Name = "txtMatricula";
             this.txtMatricula.Size = new System.Drawing.Size(276, 20);
@@ -158,6 +175,7 @@
             // 
             // txtNome
             // 
+            this.txtNome.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtNome.Location = new System.Drawing.Point(85, 46);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(308, 20);
@@ -165,6 +183,7 @@
             // 
             // txtIdade
             // 
+            this.txtIdade.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtIdade.Location = new System.Drawing.Point(85, 72);
             this.txtIdade.Name = "txtIdade";
             this.txtIdade.Size = new System.Drawing.Size(308, 20);
@@ -172,6 +191,7 @@
             // 
             // txtturno
             // 
+            this.txtturno.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtturno.Location = new System.Drawing.Point(85, 99);
             this.txtturno.Name = "txtturno";
             this.txtturno.Size = new System.Drawing.Size(308, 20);
@@ -179,6 +199,7 @@
             // 
             // txtTurma
             // 
+            this.txtTurma.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtTurma.Location = new System.Drawing.Point(85, 125);
             this.txtTurma.Name = "txtTurma";
             this.txtTurma.Size = new System.Drawing.Size(308, 20);
@@ -187,6 +208,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.DarkRed;
             this.label7.Font = new System.Drawing.Font("Square721 BT", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(24, 234);
             this.label7.Name = "label7";
@@ -196,16 +218,29 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1Nota});
             this.dataGridView1.Location = new System.Drawing.Point(42, 276);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(434, 192);
             this.dataGridView1.TabIndex = 16;
+            // 
+            // Column1Nota
+            // 
+            this.Column1Nota.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1Nota.HeaderText = "Nota";
+            this.Column1Nota.Name = "Column1Nota";
+            this.Column1Nota.ReadOnly = true;
             // 
             // CadastroAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(516, 497);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label7);
@@ -224,6 +259,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Name = "CadastroAlunos";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -252,6 +288,7 @@
         private System.Windows.Forms.TextBox txtTurma;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1Nota;
     }
 }
 

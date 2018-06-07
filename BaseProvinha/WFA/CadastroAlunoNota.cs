@@ -27,6 +27,7 @@ namespace WFA
             {
                 double nota = Convert.ToDouble(txtNota.Text);
                 aluno.AdicionarNota(nota);
+                this.DialogResult = DialogResult.OK;
                 Dispose();
 
             }
