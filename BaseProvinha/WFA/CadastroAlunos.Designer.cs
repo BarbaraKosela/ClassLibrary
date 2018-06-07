@@ -129,6 +129,7 @@
             // btnAdicionar
             // 
             this.btnAdicionar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAdicionar.Enabled = false;
             this.btnAdicionar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdicionar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnAdicionar.Location = new System.Drawing.Point(352, 186);
@@ -142,6 +143,7 @@
             // btnEditar
             // 
             this.btnEditar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnEditar.Enabled = false;
             this.btnEditar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEditar.Location = new System.Drawing.Point(188, 186);
@@ -155,6 +157,7 @@
             // btnApagar
             // 
             this.btnApagar.BackColor = System.Drawing.Color.DarkRed;
+            this.btnApagar.Enabled = false;
             this.btnApagar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnApagar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnApagar.Location = new System.Drawing.Point(27, 186);

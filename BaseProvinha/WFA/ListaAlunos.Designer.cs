@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnApagarAluno = new System.Windows.Forms.Button();
-            this.btnEditarAluno = new System.Windows.Forms.Button();
-            this.btnAdicionarAluno = new System.Windows.Forms.Button();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1Turma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1Turno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1Idade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnApagarAluno = new System.Windows.Forms.Button();
+            this.btnEditarAluno = new System.Windows.Forms.Button();
+            this.btnAdicionarAluno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,37 +54,6 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(470, 407);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // btnApagarAluno
-            // 
-            this.btnApagarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnApagarAluno.Location = new System.Drawing.Point(347, 12);
-            this.btnApagarAluno.Name = "btnApagarAluno";
-            this.btnApagarAluno.Size = new System.Drawing.Size(140, 36);
-            this.btnApagarAluno.TabIndex = 17;
-            this.btnApagarAluno.Text = "APAGAR";
-            this.btnApagarAluno.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarAluno
-            // 
-            this.btnEditarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditarAluno.Location = new System.Drawing.Point(27, 12);
-            this.btnEditarAluno.Name = "btnEditarAluno";
-            this.btnEditarAluno.Size = new System.Drawing.Size(140, 36);
-            this.btnEditarAluno.TabIndex = 20;
-            this.btnEditarAluno.Text = "EDITAR";
-            this.btnEditarAluno.UseVisualStyleBackColor = true;
-            // 
-            // btnAdicionarAluno
-            // 
-            this.btnAdicionarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdicionarAluno.Location = new System.Drawing.Point(188, 12);
-            this.btnAdicionarAluno.Name = "btnAdicionarAluno";
-            this.btnAdicionarAluno.Size = new System.Drawing.Size(140, 36);
-            this.btnAdicionarAluno.TabIndex = 19;
-            this.btnAdicionarAluno.Text = "ADICIONAR";
-            this.btnAdicionarAluno.UseVisualStyleBackColor = true;
-            this.btnAdicionarAluno.Click += new System.EventHandler(this.btnAdicionarAluno_Click);
             // 
             // ColumnNome
             // 
@@ -114,10 +83,48 @@
             this.Column1Idade.Name = "Column1Idade";
             this.Column1Idade.ReadOnly = true;
             // 
+            // btnApagarAluno
+            // 
+            this.btnApagarAluno.BackColor = System.Drawing.Color.DarkRed;
+            this.btnApagarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnApagarAluno.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnApagarAluno.Location = new System.Drawing.Point(347, 12);
+            this.btnApagarAluno.Name = "btnApagarAluno";
+            this.btnApagarAluno.Size = new System.Drawing.Size(140, 36);
+            this.btnApagarAluno.TabIndex = 17;
+            this.btnApagarAluno.Text = "APAGAR";
+            this.btnApagarAluno.UseVisualStyleBackColor = false;
+            // 
+            // btnEditarAluno
+            // 
+            this.btnEditarAluno.BackColor = System.Drawing.Color.DarkRed;
+            this.btnEditarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarAluno.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnEditarAluno.Location = new System.Drawing.Point(27, 12);
+            this.btnEditarAluno.Name = "btnEditarAluno";
+            this.btnEditarAluno.Size = new System.Drawing.Size(140, 36);
+            this.btnEditarAluno.TabIndex = 20;
+            this.btnEditarAluno.Text = "EDITAR";
+            this.btnEditarAluno.UseVisualStyleBackColor = false;
+            // 
+            // btnAdicionarAluno
+            // 
+            this.btnAdicionarAluno.BackColor = System.Drawing.Color.DarkRed;
+            this.btnAdicionarAluno.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionarAluno.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdicionarAluno.Location = new System.Drawing.Point(188, 12);
+            this.btnAdicionarAluno.Name = "btnAdicionarAluno";
+            this.btnAdicionarAluno.Size = new System.Drawing.Size(140, 36);
+            this.btnAdicionarAluno.TabIndex = 19;
+            this.btnAdicionarAluno.Text = "ADICIONAR";
+            this.btnAdicionarAluno.UseVisualStyleBackColor = false;
+            this.btnAdicionarAluno.Click += new System.EventHandler(this.btnAdicionarAluno_Click);
+            // 
             // ListaAlunos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(516, 497);
             this.Controls.Add(this.btnEditarAluno);
             this.Controls.Add(this.btnAdicionarAluno);

@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class Aluno
     {
-
+        private int Codigo;
         private string Nome;
         private int Idade;
         private string Turno;

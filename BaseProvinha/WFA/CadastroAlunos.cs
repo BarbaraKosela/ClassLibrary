@@ -28,13 +28,20 @@ namespace WFA
         {
             try
             {
-                aluno = new Aluno();
+                if (aluno == null)
+                {
+                    aluno = new Aluno();
+                }
+
                 aluno.SetNome(txtNome.Text);
                 aluno.SetIdade(Convert.ToInt32(txtIdade.Text));
                 aluno.SetTurma(txtTurma.Text);
                 aluno.SetTurno(txtturno.Text);
                 aluno.SetMatricula(Convert.ToInt32(txtMatricula.Text));
                 Program.alunos.Add(aluno);
+                btnAdicionar.Enabled = true;
+                btnApagar.Enabled = true;
+                btnEditar.Enabled = true;
 
             
             }

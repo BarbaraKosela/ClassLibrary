@@ -37,5 +37,11 @@ namespace WFA
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            Dispose();
+        }
     }
 }
