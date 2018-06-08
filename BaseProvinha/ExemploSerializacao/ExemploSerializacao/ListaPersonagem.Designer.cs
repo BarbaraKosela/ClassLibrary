@@ -102,7 +102,7 @@
             this.cbCla.Location = new System.Drawing.Point(63, 81);
             this.cbCla.Name = "cbCla";
             this.cbCla.Size = new System.Drawing.Size(254, 21);
-            this.cbCla.TabIndex = 3;
+            this.cbCla.TabIndex = 2;
             // 
             // txtNome
             // 
@@ -110,7 +110,7 @@
             this.txtNome.Location = new System.Drawing.Point(81, 25);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(236, 20);
-            this.txtNome.TabIndex = 4;
+            this.txtNome.TabIndex = 1;
             // 
             // txtNivelChakra
             // 
@@ -118,7 +118,7 @@
             this.txtNivelChakra.Location = new System.Drawing.Point(152, 139);
             this.txtNivelChakra.Name = "txtNivelChakra";
             this.txtNivelChakra.Size = new System.Drawing.Size(165, 20);
-            this.txtNivelChakra.TabIndex = 5;
+            this.txtNivelChakra.TabIndex = 3;
             // 
             // btnSalvar
             // 
@@ -152,6 +152,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(305, 195);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.DoubleClick += new System.EventHandler(this.dataGridView1_DoubleClick);
             // 
             // Column1Nome
             // 
@@ -215,6 +216,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Activated += new System.EventHandler(this.ListaPersonagem_Activated);
+            this.DoubleClick += new System.EventHandler(this.ListaPersonagem_DoubleClick);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ListaPersonagem_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

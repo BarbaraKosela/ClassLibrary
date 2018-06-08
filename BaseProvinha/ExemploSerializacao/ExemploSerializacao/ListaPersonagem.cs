@@ -72,18 +72,62 @@ namespace ExemploSerializacao
         {
             if (e.Modifiers == Keys.Control && (e.KeyCode == Keys.L || e.KeyCode == Keys.E))
             {
-                if (dataGridView1.CurrentRow == null)
+                ApagarPersonagem();
+            }
+
+            else if (e.KeyCode == Keys.F2)
+            {
+                EditarPersonagem();
+            }
+        }
+
+        private void EditarPersonagem()
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione algo nesta lista");
+                return;
+            }
+
+            string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            PersonagemRepository repository = new PersonagemRepository();
+
+            foreach (Personagem personagem in repository.ObterPersonagens())
+            {
+                if (personagem.GetNome() == nome)
                 {
-                    MessageBox.Show("Selecione algo nesta lista");
+                    txtNome.Text = personagem.GetNome();
+                    txtNivelChakra.Text = Convert.ToString(personagem.GetNivelChakra());
+                    cbCla.SelectedItem = personagem.GetCla();
+
                     return;
                 }
-
-                string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
-                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
-                PersonagemRepository repository = new PersonagemRepository();
-                repository.ApagarPersonagem(nome);
-                MessageBox.Show(nome + " apagado com sucesso");
             }
+        }
+
+        private void ApagarPersonagem()
+        {
+            if (dataGridView1.CurrentRow == null)
+            {
+                MessageBox.Show("Selecione algo nesta lista");
+                return;
+            }
+
+            string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+            dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+            PersonagemRepository repository = new PersonagemRepository();
+            repository.ApagarPersonagem(nome);
+            MessageBox.Show(nome + " apagado com sucesso");
+        }
+
+        private void ListaPersonagem_DoubleClick(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_DoubleClick(object sender, EventArgs e)
+        {
+            EditarPersonagem();
         }
     }
 }
