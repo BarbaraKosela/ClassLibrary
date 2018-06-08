@@ -37,7 +37,12 @@
             this.txtNivelChakra = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1cla = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1NivelChakra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -115,7 +120,7 @@
             this.btnSalvar.BackColor = System.Drawing.Color.LightCoral;
             this.btnSalvar.Font = new System.Drawing.Font("Square721 BT", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSalvar.Location = new System.Drawing.Point(12, 190);
+            this.btnSalvar.Location = new System.Drawing.Point(12, 176);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(327, 72);
             this.btnSalvar.TabIndex = 6;
@@ -126,19 +131,58 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(345, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(382, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(152, 285);
+            this.pictureBox1.Size = new System.Drawing.Size(226, 454);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.IndianRed;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1Nome,
+            this.Column1cla,
+            this.Column1NivelChakra});
+            this.dataGridView1.GridColor = System.Drawing.Color.IndianRed;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 266);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(327, 195);
+            this.dataGridView1.TabIndex = 8;
+            // 
+            // Column1Nome
+            // 
+            this.Column1Nome.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1Nome.HeaderText = "Nome";
+            this.Column1Nome.Name = "Column1Nome";
+            this.Column1Nome.ReadOnly = true;
+            // 
+            // Column1cla
+            // 
+            this.Column1cla.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1cla.HeaderText = "Clã";
+            this.Column1cla.Name = "Column1cla";
+            this.Column1cla.ReadOnly = true;
+            // 
+            // Column1NivelChakra
+            // 
+            this.Column1NivelChakra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1NivelChakra.HeaderText = "Nivel Chakra";
+            this.Column1NivelChakra.Name = "Column1NivelChakra";
+            this.Column1NivelChakra.ReadOnly = true;
             // 
             // ListaPersonagem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(518, 295);
+            this.ClientSize = new System.Drawing.Size(635, 474);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtNivelChakra);
@@ -150,7 +194,9 @@
             this.Name = "ListaPersonagem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Activated += new System.EventHandler(this.ListaPersonagem_Activated);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,6 +212,10 @@
         private System.Windows.Forms.TextBox txtNivelChakra;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1Nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1cla;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1NivelChakra;
     }
 }
 

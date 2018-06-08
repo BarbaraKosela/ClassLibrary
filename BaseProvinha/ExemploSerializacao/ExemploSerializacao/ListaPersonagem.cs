@@ -40,6 +40,29 @@ namespace ExemploSerializacao
             BinaryFormatter binaryWritter = new BinaryFormatter();
             Stream stream = new FileStream("Personagem.bin", FileMode.Create, FileAccess.Write);
             binaryWritter.Serialize(stream, tudo);
+            stream.Close();
+            MessageBox.Show("Personagem cadastrado com sucesso");
+            AtualizarPersonagem();
+        }
+
+        private void ListaPersonagem_Activated(object sender, EventArgs e)
+        {
+            AtualizarPersonagem();
+        }
+
+        private void AtualizarPersonagem()
+        {
+            Tudo tudo = new Tudo();
+            dataGridView1.Rows.Clear();
+            foreach (Personagem personagem in tudo.ObterPersonagens())
+            {
+                dataGridView1.Rows.Add(new Object[]{
+                
+                personagem.GetNome(),
+                personagem.GetCla(),
+                personagem.GetNivelChakra()
+                });
+            }
         }
     }
 }
