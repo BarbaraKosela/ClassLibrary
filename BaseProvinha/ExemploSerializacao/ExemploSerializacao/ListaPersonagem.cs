@@ -15,6 +15,7 @@ namespace ExemploSerializacao
 {
     public partial class ListaPersonagem : Form
     {
+    public static string NOME_ARQUIVO = "Personagens.bin";
         public ListaPersonagem()
         {
             InitializeComponent();
@@ -38,7 +39,7 @@ namespace ExemploSerializacao
             tudo.AdicionarPersonagem(personagem);
 
             BinaryFormatter binaryWritter = new BinaryFormatter();
-            Stream stream = new FileStream("Personagem.bin", FileMode.Create, FileAccess.Write);
+            Stream stream = new FileStream(ListaPersonagem.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
             binaryWritter.Serialize(stream, tudo);
             stream.Close();
             MessageBox.Show("Personagem cadastrado com sucesso");

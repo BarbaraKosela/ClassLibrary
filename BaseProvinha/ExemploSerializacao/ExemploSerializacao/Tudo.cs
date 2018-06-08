@@ -19,7 +19,7 @@ namespace ExemploSerializacao
             
             {
                 BinaryFormatter binaryReader = new BinaryFormatter();
-                Stream stream = File.OpenRead("Personagens.Bin");
+                Stream stream = File.OpenRead(ListaPersonagem.NOME_ARQUIVO);
                 personagens = ((Tudo) binaryReader.Deserialize(stream)).ObterPersonagens();
                 stream.Close();
             }
