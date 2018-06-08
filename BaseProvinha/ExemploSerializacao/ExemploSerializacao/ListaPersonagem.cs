@@ -15,6 +15,7 @@ namespace ExemploSerializacao
 {
     public partial class ListaPersonagem : Form
     {
+        public int posicao = -1;
     public static string NOME_ARQUIVO = "Personagens.bin";
         public ListaPersonagem()
         {
@@ -36,11 +37,30 @@ namespace ExemploSerializacao
 
 
             PersonagemRepository tudo = new PersonagemRepository();
-            tudo.AdicionarPersonagem(personagem);
-
             
-            MessageBox.Show("Personagem cadastrado com sucesso");
+            if (posicao == -1)
+            {
+                tudo.AdicionarPersonagem(personagem);
+                MessageBox.Show("Personagem cadastrado com sucesso");
+            }
+            else
+            {
+                tudo.EditarPersonagem(personagem, posicao);
+                MessageBox.Show("Personagem alterado com sucesso");
+            }
+
+            LimparCampos();
             AtualizarPersonagem();
+            
+            
+        }
+
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            txtNivelChakra.Text = "";
+            cbCla.SelectedIndex = -1;
+            posicao = -1;
         }
 
         private void ListaPersonagem_Activated(object sender, EventArgs e)
@@ -91,7 +111,7 @@ namespace ExemploSerializacao
 
             string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
             PersonagemRepository repository = new PersonagemRepository();
-
+            int quantidade = 0;
             foreach (Personagem personagem in repository.ObterPersonagens())
             {
                 if (personagem.GetNome() == nome)
@@ -99,9 +119,10 @@ namespace ExemploSerializacao
                     txtNome.Text = personagem.GetNome();
                     txtNivelChakra.Text = Convert.ToString(personagem.GetNivelChakra());
                     cbCla.SelectedItem = personagem.GetCla();
-
+                    posicao = quantidade;
                     return;
                 }
+                quantidade ++;
             }
         }
 
@@ -118,6 +139,7 @@ namespace ExemploSerializacao
             PersonagemRepository repository = new PersonagemRepository();
             repository.ApagarPersonagem(nome);
             MessageBox.Show(nome + " apagado com sucesso");
+            LimparCampos();
         }
 
         private void ListaPersonagem_DoubleClick(object sender, EventArgs e)

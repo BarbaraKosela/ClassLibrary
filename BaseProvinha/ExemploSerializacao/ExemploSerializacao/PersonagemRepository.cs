@@ -57,5 +57,11 @@ namespace ExemploSerializacao
                 }
             }
         }
+
+        internal void EditarPersonagem(Personagem personagem, int posicao)
+        {
+            personagens[posicao] = personagem;
+            EscreverNoArquivoDosPersonagens();
+        }
     }
 }
