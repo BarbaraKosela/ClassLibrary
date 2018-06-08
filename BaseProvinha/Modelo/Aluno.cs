@@ -114,6 +114,8 @@ namespace Modelo
             {
                 throw new Exception("A matricula deve ser maior do que 0");
             }
+
+            Matricula = matricula;
         }
 
         public int GetMatricula()
