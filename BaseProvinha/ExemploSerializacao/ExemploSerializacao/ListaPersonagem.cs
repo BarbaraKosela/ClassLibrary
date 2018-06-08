@@ -62,5 +62,28 @@ namespace ExemploSerializacao
                 });
             }
         }
+
+        private void btnSalvar_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void ListaPersonagem_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Modifiers == Keys.Control && (e.KeyCode == Keys.L || e.KeyCode == Keys.E))
+            {
+                if (dataGridView1.CurrentRow == null)
+                {
+                    MessageBox.Show("Selecione algo nesta lista");
+                    return;
+                }
+
+                string nome = dataGridView1.Rows[dataGridView1.CurrentRow.Index].Cells[0].Value.ToString();
+                dataGridView1.Rows.RemoveAt(dataGridView1.CurrentRow.Index);
+                PersonagemRepository repository = new PersonagemRepository();
+                repository.ApagarPersonagem(nome);
+                MessageBox.Show(nome + " apagado com sucesso");
+            }
+        }
     }
 }

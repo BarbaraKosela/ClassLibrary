@@ -29,6 +29,11 @@ namespace ExemploSerializacao
         {
             personagens.Add(personagem);
 
+            EscreverNoArquivoDosPersonagens();
+        }
+
+        private void EscreverNoArquivoDosPersonagens()
+        {
             BinaryFormatter binaryWritter = new BinaryFormatter();
             Stream stream = new FileStream(ListaPersonagem.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
             binaryWritter.Serialize(stream, this);
@@ -38,6 +43,19 @@ namespace ExemploSerializacao
         public List<Personagem> ObterPersonagens()
         {
             return personagens;
+        }
+
+        internal void ApagarPersonagem(string nome)
+        {
+            foreach (Personagem personagem in personagens)
+            {
+                if (personagem.GetNome() == nome)
+                {
+                    personagens.Remove(personagem);
+                    EscreverNoArquivoDosPersonagens();
+                    return;
+                }
+            }
         }
     }
 }
