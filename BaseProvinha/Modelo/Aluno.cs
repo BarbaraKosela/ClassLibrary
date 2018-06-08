@@ -113,7 +113,9 @@ namespace Modelo
             if (matricula < 0)
             {
                 throw new Exception("A matricula deve ser maior do que 0");
+
             }
+
 
             Matricula = matricula;
         }
