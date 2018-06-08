@@ -1,0 +1,23 @@
+Youtuber 
+
+Nome;
+sobrenome;
+apelido;
+nome canal;
+quantidade inscritos;
+quantidade visualizações;
+quantidade de likes;
+descrição;
+renda;
+link;
+nascionalidade;
+quantidade de vídeos;
+categoria;
+anuncio;
+possui patrocinador;
+strikes;
+plataforma;
+é streamer;
+
+
+
