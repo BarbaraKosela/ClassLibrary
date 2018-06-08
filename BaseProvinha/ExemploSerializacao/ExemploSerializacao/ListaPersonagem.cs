@@ -35,13 +35,10 @@ namespace ExemploSerializacao
             personagem.SetCla(cbCla.SelectedItem.ToString());
 
 
-            Tudo tudo = new Tudo();
+            PersonagemRepository tudo = new PersonagemRepository();
             tudo.AdicionarPersonagem(personagem);
 
-            BinaryFormatter binaryWritter = new BinaryFormatter();
-            Stream stream = new FileStream(ListaPersonagem.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
-            binaryWritter.Serialize(stream, tudo);
-            stream.Close();
+            
             MessageBox.Show("Personagem cadastrado com sucesso");
             AtualizarPersonagem();
         }
@@ -53,7 +50,7 @@ namespace ExemploSerializacao
 
         private void AtualizarPersonagem()
         {
-            Tudo tudo = new Tudo();
+            PersonagemRepository tudo = new PersonagemRepository();
             dataGridView1.Rows.Clear();
             foreach (Personagem personagem in tudo.ObterPersonagens())
             {

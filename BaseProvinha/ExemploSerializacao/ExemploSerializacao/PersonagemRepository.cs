@@ -10,17 +10,17 @@ using System.Threading.Tasks;
 namespace ExemploSerializacao
 {
     [Serializable]
-    class Tudo
+    class PersonagemRepository
     {
         List<Personagem> personagens = new List<Personagem>();
-        public Tudo()
+        public PersonagemRepository()
         {
             if (File.Exists("Personagens.bin"))
             
             {
                 BinaryFormatter binaryReader = new BinaryFormatter();
                 Stream stream = File.OpenRead(ListaPersonagem.NOME_ARQUIVO);
-                personagens = ((Tudo) binaryReader.Deserialize(stream)).ObterPersonagens();
+                personagens = ((PersonagemRepository) binaryReader.Deserialize(stream)).ObterPersonagens();
                 stream.Close();
             }
         }
@@ -28,6 +28,11 @@ namespace ExemploSerializacao
         public void AdicionarPersonagem(Personagem personagem)
         {
             personagens.Add(personagem);
+
+            BinaryFormatter binaryWritter = new BinaryFormatter();
+            Stream stream = new FileStream(ListaPersonagem.NOME_ARQUIVO, FileMode.Create, FileAccess.Write);
+            binaryWritter.Serialize(stream, this);
+            stream.Close();
         }
 
         public List<Personagem> ObterPersonagens()
